@@ -48,10 +48,10 @@
     }
 
     // 插件构造函数 - 返回数组结构
-    function MyDialog(opt){
+    function LjBox(opt){
         this._initial(opt);
     }
-    MyDialog.prototype = {
+    LjBox.prototype = {
         constructor: this,
         _initial: function(opt) {
             // 默认参数
@@ -202,10 +202,10 @@
     // 最后将插件对象暴露给全局对象
     _global = (function(){ return this || (0, eval)('this'); }());
     if (typeof module !== "undefined" && module.exports) {
-        module.exports = MyDialog;
+        module.exports = LjBox;
     } else if (typeof define === "function" && define.amd) {
-        define(function(){return MyDialog;});
+        define(function(){return LjBox;});
     } else {
-        !('MyDialog' in _global) && (_global.MyDialog = MyDialog);
+        !('LjBox' in _global) && (_global.LjBox = LjBox);
     }
 }());
